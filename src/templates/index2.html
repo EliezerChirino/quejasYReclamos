@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="/src/estyles22.css">
+    
+    
+    
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <nav>
+        <div class="flex lg:hidden items-center justify-between h-auto px-5 w-full  bg-[#fff] ">
+            <div class="flex items-center">
+
+                
+                <div class="btn mr-3 w-[40px] h-[40px] bg-[#fff] rounded-[50%] flex items-center justify-center shadow-lg p-5 cursor-pointer hover:shadow-none " id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </div>
+                <div class="logo flex gap-2 p-[10px] items-center ">
+                    <img src="/imagenes/mg.png" id="imagenmgr" >
+                    <h2 class="w-2" id="textomgr" >Montana Gráfica</h2>
+                </div>
+            </div>
+
+            <div class="person relative" id="down">
+                <span class="material-icons-sharp text-[25px] "   >
+                    account_circle
+                </span>
+                <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                    keyboard_arrow_down
+                </span>
+                
+                <div class="hidden absolute  flex-col gap-4 z-10 contenedor-class top-[70px] right-[03px] w-[200px]" id="dropdown">
+                    <li class=" deco list-none">
+                        <a href="algo" class=" flex justify-around rounded-lg" >Ayuda 
+                            <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                            help
+                        </span></a>
+                    </li>
+                    <li class=" deco list-none">
+                        <a href="algo" class=" flex justify-around rounded-lg " >Cerrar cesión
+                            <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                            logout
+                        </span></a>
+                    </li>
+                </div>
+            </div>
+            
+
+        </div>
+    </nav>
+    <div class="grid grid-cols-[14rem_auto] lg:grid-cols-[15rem_auto_16rem] gap-3 lg:gap-7 w-[96%] mx-auto" id="principal">
+        <aside class="h-screen sticky top-0">
+            <div class="hidden sm:hidden md:hidden lg:flex items-center justify-between w-full mt-6">
+
+                <div class="logo flex gap-2 p-[5px] w-[200px]">
+                    <img src="/imagenes/mg.png" id="imagenmgr" class="w-full" >
+                    <h2 class="w-10" id="textomgrd" >Montana Gráfica</h2>
+                </div>
+                <div class="btn mr-3 w-[40px] h-[40px] bg-[#fff] rounded-[50%] flex items-center justify-center shadow-lg p-5 cursor-pointer hover:shadow-none " id="menu-boton">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="sidebar flex flex-col  rounded-xl h-full relative top-4 transition-all duration-200 hover:shadow-none ">
+                
+                <div class="flex flex-col columna-1   overflow-x-hidden active"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Reclamos</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        dashboard
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Listado de Q/R</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Registro</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col columna-1   overflow-x-hidden"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Laser</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Nueva</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Lista</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col columna-1   overflow-x-hidden"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Inventario Cilindros</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">algo</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">algo</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+                <!-- contenido del main -->
+                <main class=" mt-2 flex flex-col gap-6 w-full ">
+                    <h1>Dashboard</h1>
+                    <div class="grid lg:grid-cols-3 gap-6 analyse  grid-cols-1  ">
+                        <div class=" flex justify-center items-center  contenedor-class ">
+                            <div class=" flex justify-between items-center w-full ">
+                                <div class="">
+                                    <h3>Total Q/R</h3>
+                                    <h1 class= " text-2xl" >65,205</h1>
+                                </div>
+                                <div class=" grafico relative  ">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="bg" cx="50" cy="50" r="40"></circle>
+                                        <circle class="meter" cx="50" cy="50" r="40"></circle>
+                                    </svg>
+                                    <div class="percentage">
+                                        <p class=" text-sm ">+81%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" flex justify-center items-center  contenedor-class ">
+                            <div class=" flex justify-between items-center w-full ">
+                                <div class="">
+                                    <h3>En Proceso</h3>
+                                    <h1 class= " text-2xl">65,205</h1>
+                                </div>
+                                <div class=" grafico relative  ">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="bg" cx="50" cy="50" r="40"></circle>
+                                        <circle class="meter red" cx="50" cy="50" r="40"></circle>
+                                    </svg>
+                                    <div class="percentage">
+                                        <p class=" text-sm ">+81%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" flex justify-center items-center  contenedor-class ">
+                            <div class=" flex justify-between items-center w-full ">
+                                <div class="">
+                                    <h3>Quejas</h3>
+                                    <h1 class= " text-2xl">65,205</h1>
+                                </div>
+                                <div class=" grafico relative  ">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="bg" cx="50" cy="50" r="40"></circle>
+                                        <circle class="meter red" cx="50" cy="50" r="40"></circle>
+                                    </svg>
+                                    <div class="percentage">
+                                        <p class=" text-sm ">+81%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="contenedor-class overflow-x-hidden w-full px-11">
+                        <h2>Quejas/reclamos realizados</h2>
+                        <table id="example" class="w-full p-0 m-0"  >
+                            <thead class=" p-0 m-0" style="width: 0px;" > 
+                                <tr class="w-full">
+                                    <th>Reclamo N°</th>
+                                    <th>Ultima intervención por:</th>
+                                    <th>Departamento</th>
+                                    <th>Departamentos por intervenir</th>
+                                    <th>Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+
+                                <tr>
+                                    <td><h2>1</h2></td>
+                                    <td>Eliezer Chirino</td>
+                                    <td>Departamento</td>
+                                    <td class=" ">
+                                        <ul class=" flex flex-col gap-1 justify-center items-center max-h-[70px] overflow-y-auto">
+                                            <li class="table-style-element bg-[--color-primaryMG] text-[--color-white]">Desarrollo</li>
+                                            <li class="table-style-element bg-[--color-success] text-[--color-white]">Ventas</li>
+                                        </ul>
+                                    </td>
+                                    <td class="status"> <h3 class=" bg-[--color-primary] text-[--color-white]">3</h3></td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><h2>1</h2></td>
+                                    <td>Eliezer Chirino</td>
+                                    <td>Departamento</td>
+                                    <td class=" ">
+                                        <ul class=" flex flex-col gap-1 justify-center items-center max-h-[70px] overflow-y-auto">
+                                            <li class="table-style-element bg-[--color-primaryMG] text-[--color-white]">Desarrollo</li>
+                                            <li class="table-style-element bg-[--color-success] text-[--color-white]">Ventas</li>
+                                        </ul>
+                                    </td>
+                                    <td class="status"> <h3 class=" bg-[--color-primary] text-[--color-white]">3</h3></td>
+
+                                </tr>
+
+                                <tr> 
+                                    <td><h2>1</h2></td>
+                                    <td>Eliezer Chirino</td>
+                                    <td>Departamento</td>
+                                    <td class=" ">
+                                        <ul class=" flex flex-col gap-1 justify-center items-center max-h-[70px] overflow-y-auto">
+                                            <li class="table-style-element bg-[--color-primaryMG] text-[--color-white]">Desarrollo</li>
+                                            <li class="table-style-element bg-[--color-success] text-[--color-white]">Ventas</li>
+                                        </ul>
+                                    </td>
+                                    <td class="status"> <h3 class=" bg-[--color-primary] text-[--color-white]">3</h3></td>
+
+                                </tr>
+                            </tbody>
+                            <tfoot >
+                                <tr >
+                                    <th>Reclamo N°</th>
+                                    <th>Ultima intervención por:</th>
+                                    <th>Departamento</th>
+                                    <th>Departamentos por intervenir</th>
+                                    <th>Estatus</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </main>
+
+
+                <div class="right-section hidden sm:hidden md:hidden lg:flex flex-col mt-5">
+                    <div class=" flex justify-center items-center flex-col contenedor-class ">
+                        <div class="person">
+                            <span class="material-icons-sharp text-[75px] "   >
+                                account_circle
+                            </span>
+                        </div>
+
+                        <div class="person">
+                            <h1 class=" text-2xl text-center">Eliezer Chirino</h1>
+                            <h3 class="text-center text-slate-400 text-sm"> Departamento de Digitalización Industrial</h3>
+                        </div>
+                    </div>
+
+                    <div class="reminders">
+                        <div class="header">
+                            <h2>Reminders</h2>
+                            <span class="material-icons-sharp">
+                                notifications_none
+                            </span>
+                        </div>
+
+                        <div class="notification">
+                            <div class="icon">
+                                <span class="material-icons-sharp">
+                                    volume_up
+                                </span>
+                            </div>
+                            <div class="content">
+                                <div class="info">
+                                    <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                        08:00 AM - 12:00 PM
+                                    </small>
+                                </div>
+                                <span class="material-icons-sharp">
+                                    more_vert
+                                </span>
+                            </div>
+                        </div>
+            
+                        <div class="notification deactive">
+                            <div class="icon">
+                                <span class="material-icons-sharp">
+                                    edit
+                                </span>
+                            </div>
+                            <div class="content">
+                                <div class="info">
+                                    <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                        08:00 AM - 12:00 PM
+                                    </small>
+                                </div>
+                                <span class="material-icons-sharp">
+                                    more_vert
+                                </span>
+                            </div>
+                        </div>
+            
+                        <div class="notification add-reminder">
+                            <div>
+                                <span class="material-icons-sharp">
+                                    add
+                                </span>
+                                <h3>Add Reminder</h3>
+                            </div>
+                        </div>
+            
+                </div>
+
+
+    </div>
+
+<!-- Scripts de JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+<script src="/src/index.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            autoWidth: false,  
+            columnDefs: [
+                { targets: '_all', width: 'auto' }  
+            ],
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

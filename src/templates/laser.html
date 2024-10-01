@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/output.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="/src/estyles22.css">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <nav>
+        <div class="flex lg:hidden items-center justify-between h-auto px-5 w-full  bg-[#fff] ">
+            <div class="flex items-center">
+
+                
+                <div class="btn mr-3 w-[40px] h-[40px] bg-[#fff] rounded-[50%] flex items-center justify-center shadow-lg p-5 cursor-pointer hover:shadow-none " id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </div>
+                <div class="logo flex gap-2 p-[10px] items-center ">
+                    <img src="/imagenes/mg.png" id="imagenmgr" >
+                    <h2 class="w-2" id="textomgr" >Montana Gráfica</h2>
+                </div>
+            </div>
+
+            <div class="person relative" id="down">
+                <span class="material-icons-sharp text-[25px] "   >
+                    account_circle
+                </span>
+                <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                    keyboard_arrow_down
+                </span>
+                
+                <div class="hidden absolute  flex-col gap-4 z-10 contenedor-class top-[70px] right-[03px] w-[200px]" id="dropdown">
+                    <li class=" deco list-none">
+                        <a href="algo" class=" flex justify-around rounded-lg" >Ayuda 
+                            <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                            help
+                        </span></a>
+                    </li>
+                    <li class=" deco list-none">
+                        <a href="algo" class=" flex justify-around rounded-lg " >Cerrar cesión
+                            <span class="material-icons-sharp text-[25px] cursor-pointer "   >
+                            logout
+                        </span></a>
+                    </li>
+                </div>
+            </div>
+            
+
+        </div>
+    </nav>
+    <div class="grid grid-cols-[14rem_auto] lg:grid-cols-[15rem_auto_15rem] gap-3 lg:gap-7 w-[96%] mx-auto" id="principal">
+        <aside class="h-screen sticky top-0">
+            <div class="hidden sm:hidden md:hidden lg:flex items-center justify-between w-full mt-6">
+
+                <div class="logo flex gap-2 p-[5px] w-[200px]">
+                    <img src="/imagenes/mg.png" id="imagenmgr" class="w-full" >
+                    <h2 class="w-10" id="textomgrd" >Montana Gráfica</h2>
+                </div>
+                <div class="btn mr-3 w-[40px] h-[40px] bg-[#fff] rounded-[50%] flex items-center justify-center shadow-lg p-5 cursor-pointer hover:shadow-none " id="menu-boton">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="sidebar flex flex-col  rounded-xl h-full relative top-4 transition-all duration-200 hover:shadow-none ">
+                
+                <div class="flex flex-col columna-1   overflow-x-hidden"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Reclamos</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="/src/index.html" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        dashboard
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Listado de Q/R</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="/src/Form.html" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Registro</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col columna-1   overflow-x-hidden active"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Laser</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Nueva</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">Lista</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col columna-1   overflow-x-hidden"> 
+                    <div class="conte-1 flex items-center justify-between pr-6 gap-4 relative ml-5 transition-all duration-200 hover:text-[var(--color-primaryMG)] hover:ml-6" >
+                        <div class="flex gap-3">
+                        <span class="material-icons-sharp">
+                            summarize
+                            </span>
+                        <h3 class="elh3">Inventario Cilindros</h3>
+                        </div>
+                        <span class="material-icons-sharp arrow"  >
+                            arrow_forward_ios
+                            </span>
+                    </div>
+                    <div class="flex flex-col  "> 
+                        <div class="conte-a hover:bg-[--color-light] active">
+                        
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">algo</h3>
+                            </a>
+                        </div>
+                        <div class="conte-a hover:bg-[--color-light]">
+                            <a href="" class="flex items-center  pl-8 h-14 gap-1 relative     " >
+                                <span class="material-icons-sharp text-[23px] "   >
+                                        fact_check
+                                        
+                                    </span>
+                                <h3 class=" text-[#333a60]  ">algo</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- contenido del main -->
+        <main class=" mt-2 flex flex-col gap-6 w-full ">
+            <div class="container w-full">
+
+                <section class="w-full flex flex-col gap-5 ">
+                    
+                    <!--Title-->
+                    <div class="flex flex-col sm:flex-row justify-between pt-6 gap-4 sm:gap-0">
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                                Proceso Laser
+                            </h1>
+                        </div>
+                    
+                        <div class="contenedor-class flex flex-col sm:flex-row gap-3 justify-center items-center p-4 sm:p-6">
+                            <h4 class="font-bold sm:text-lg text-base">
+                                Estatus del Proceso:
+                            </h4>
+                            <div class="bg-[--color-info-dark] p-2 rounded-full w-7 h-7 flex justify-center items-center">
+                                <h3 class="text-white text-sm sm:text-base">2</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contenedor-class w-full flex flex-col gap-8  " id="seccion1">
+                        <div class="flex items-center justify-between ">
+                            <h2 id='Seccion1'>Sección 1: Información General</h2>
+                            <h3 class=" p-3 "><strong> Responsable:  </strong> Area de:</h3>
+                        </div>
+                        <form class="form-type-1 flex flex-col gap-7">
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Cliente </h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                person
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Escribe el nombre del cliente" required="" type="text" id="Cliente"> 
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Producto </h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                category
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Escribe el nombre del cliente" required="" type="text" id="Producto"> 
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex-col  flex">
+                                    
+                                    <div class="w-full m-0 p-0 h-auto">
+                                        <div class="flex items-center w-full justify-center gap-12"  >
+                                            <h4>Codigo de SAP </h4>
+                                            <label class="checkbox-container"> FM0
+                                                <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                                <span class="checkmark"></span>
+                                            </label>
+    
+                                            <label class="checkbox-container"> FM4
+                                                <input class="custom-checkbox" checked="" type="checkbox" id="FM4">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                qr_code_2
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Escribe el nombre del cliente" required="" type="text" id="CodigoSAP"> 
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 flex flex-col gap-3">
+                                    <h4>Fecha </h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                calendar_month
+                                                </span>
+                                        </div>
+                                        <input class="input fecha" placeholder="Type your text" required="" type="date" id="fechaDefecto">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex-col  flex gap-2">
+                                    <h4>Aprobación del Cliente</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 flex flex-col gap-3">
+                                    <h4>Laser</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex-col  flex gap-2">
+                                    <h4>Especificaciones</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 flex flex-col gap-3">
+                                    <h4>Plano Mecánico</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex-col  flex gap-2">
+                                    <h4>Referencia de Color</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 flex flex-col gap-3">
+                                    <h4>Muestra Impresa</h4>
+                                    <div class="entrada flex items-center w-full">
+                                        <div> 
+                                            <span class="material-icons-sharp text-xl">
+                                                folder_open
+                                                </span>
+                                        </div>
+                                        <input class="input" placeholder="Ingresa la ubicación del material" required type="file" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                    <!--divider-->
+                    <hr class="bg-gray-300 my-12">
+
+                    <div class="contenedor-class w-full flex flex-col gap-8  " id="seccion2">
+                        <div class="flex items-center justify-between ">
+                            <h2 id='Seccion2'>Sección 2: Caracteristicas del trabajo</h2>
+                            <h3 class=" p-3 "><strong> Responsable:  </strong> Area de:</h3>
+                        </div>
+                        <form class="form-type-1 flex flex-col gap-7">
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Tipo de trabajo </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    engineering
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">Nuevo</option>
+                                                <option value="value2" selected>algo</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Especifique </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    check
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">algo</option>
+                                                <option value="value2" selected>Nacional</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Tipo de impresión </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    print
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">Nuevo</option>
+                                                <option value="value2" selected>Reservado</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Tipo de Empaque </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    local_shipping
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">Nuevo</option>
+                                                <option value="value2" selected>Envoltorio</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <div class="titulo">
+                                <h2>Dimensiones</h2>
+                                <hr class=" bg-yellow-600 my-0 py-0" style="height: 3px;">
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Repeat (mm) </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    restart_alt
+                                                    </span>
+                                            </div>
+                                            <input class="input" required type="number" id="Imagenes" >
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Ancho de Corte (mm) </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    width_full
+                                                    </span>
+                                            </div>
+                                            <input class="input" required type="number" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Fotoelectrico (mm) </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    tungsten
+                                                    </span>
+                                            </div>
+                                            <input class="input" required type="number" id="Imagenes" >
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Diametro Interno </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    straighten
+                                                    </span>
+                                            </div>
+                                            <input class="input" required type="number" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex flex-col gap-5">
+                                    <h4>Proceso</h4>
+                                    <div class=" grid grid-cols-3 gap-4 bg-[#f7f7f7] p-7 rounded-[0.4rem] justify-center"  >
+
+                                        <label class="checkbox-container"> Metalizado
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Laminado
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Cortado
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Guillotinado
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Overlap
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Finseal
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                    <hr class="bg-gray-300 my-12">
+
+
+
+                    <div class="contenedor-class w-full flex flex-col gap-8  " id="seccion3">
+                        <div class="flex items-center justify-between ">
+                            <h2 id='Seccion3'>Sección 3: Revisión del Diseño</h2>
+                            <h3 class=" p-3 "><strong> Responsable:  </strong> Area de:</h3>
+                        </div>
+                        <form class="form-type-1 flex flex-col gap-7">
+                        
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2 flex flex-col gap-5">
+                                    <h4>Proceso</h4>
+                                    <div class="grid grid-cols-3 sm:grid-cols-1 gap-4 bg-[#f7f7f7] p-7 rounded-[0.4rem] justify-center">
+
+                                        <label class="checkbox-container"> Especificaciones Y/O Modificaciones Correctas
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Errores Ortográficos O Letras Partidas
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Dimensiones Del Ejemplar
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Textos Legales Vs Especificaciones
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Ingredientes
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Registros Sanitarios
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Otros
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Unidad De Medidas
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> C.P.E.
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> M.P.P.S.
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Filetes En Letra
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Código De Barras
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Teléfonos Y/O Direcciones Correctas
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Colores A Imprimir
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Posición Electrónico
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Reservas (Zonas De Pegado O Sellado)
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Registro (Diseño Gráfico Vs. Perfil)
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <label class="checkbox-container"> Sangrado Adecuado
+                                            <input class="custom-checkbox" checked="" type="checkbox" id="FM0">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                    <hr class="bg-gray-300 my-12">
+
+
+
+                    <div class="contenedor-class w-full flex flex-col gap-8  " id="seccion4">
+                        <div class="flex items-center justify-between ">
+                            <h2 id='Seccion4'>Sección 4: Datos Técnicos - Desarrollo de Nuevos Productos</h2>
+                            <h3 class=" p-3 "><strong> Responsable:  </strong> Area de:</h3>
+                        </div>
+                        <form class="form-type-1 flex flex-col gap-7">
+                            <div class="flex flex-col sm:flex-row gap-10">
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Forma de Entrega </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    local_shipping
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">Nuevo</option>
+                                                <option value="value2" selected>Bobinas</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Empacadora </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    backpack
+                                                    </span>
+                                            </div>
+                                            <select name="defecto" class="input" placeholder="Ingrese el Lote del reclamo" required="" type="text" id="Lote">
+                                                <option value="value1">Nuevo</option>
+                                                <option value="value2" selected>Vertical</option>
+                                                <option value="value3">algo</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2">
+                                    <h4>Vida Util </h4>
+                                        <div class="entrada flex items-center w-full">
+                                            <div > 
+                                                <span class="material-icons-sharp">
+                                                    account_box
+                                                    </span>
+                                            </div>
+                                            <input class="input" required type="number" id="Imagenes" >
+                                    </div>
+                                </div>
+                            </div>
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+
+        <div class="right-section hidden sm:hidden md:hidden lg:flex flex-col  ">
+            <div class="sticky top-3 flex flex-col gap-5">
+                <div class=" flex justify-center items-center flex-col contenedor-class ">
+                    <div class="person">
+                        <span class="material-icons-sharp text-[75px] "   >
+                            account_circle
+                        </span>
+                    </div>
+
+                    <div class="person flex flex-col gap-2 p-0">
+                        <h1 class=" text-2xl text-center">Eliezer Chirino</h1>
+                        <h3 class="text-center text-slate-400 text-sm"> Departamento de Digitalización Industrial</h3>
+                        <div class="flex justify-center items-center font-bold text-[--color-primaryMG] hover:text-yellow-600"> Cerrar Cesión<span class="material-icons-sharp "   >
+                            logout
+                        </span></div>
+                    </div>
+                </div>
+
+            <div class="w-full px-6 text-xl text-gray-800 leading-normal contenedor-class">
+                <h2 >Menu</h2>
+                <div class="block lg:hidden">
+                    <button id="menu-toggle" class="flex w-full justify-end px-3 py-3">
+                        <svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="w-full" id="menu-content">
+                    <ul class="list-reset py-2 md:py-0 flex gap-1 flex-col">
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion1' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 1</span>
+                            </a>
+                        </li>
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion2' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 2</span>
+                            </a>
+                        </li>
+                        
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion3' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 3</span>
+                            </a>
+                        </li>
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion4' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 4</span>
+                            </a>
+                        </li>
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion5' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 5</span>
+                            </a>
+                        </li>
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion6' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 6</span>
+                            </a>
+                        </li>
+
+                        <li class="py-1  hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                            <a href='#Seccion7' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                <span class="pb-1 md:pb-0 text-sm">Seccion 7</span>
+                            </a>
+                        </li>
+                        <!-- Resto del menú -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+<!-- Scripts de JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+<script src="/src/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>

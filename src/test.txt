@@ -1,0 +1,8 @@
+<div class="absolute bottom-[-53px] right-[100px] flex items-center justify-center w-16 h-16 ">
+                                    <button class="flex justify-center items-center bg-[--color-success] text-white p-2 rounded-l-lg gap-2"> <span class="material-icons-sharp">
+                                        check_circle
+                                        </span>Aceptar</button>
+                                        <button class="flex justify-center items-center bg-[--color-danger] text-white p-2 rounded-r-lg gap-2"> <span class="material-icons-sharp">
+                                            cancel
+                                            </span>Rechazar</button>
+                                </div>
